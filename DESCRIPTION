@@ -1,0 +1,71 @@
+Package: Genoppi
+Title: Genoppi
+Version: 0.1.0
+Authors@R: 
+    c(person(given = "Frederik",
+             family = "Lassen",
+             role = c("aut", "cre"),
+             email = "frhl@gmail.com"))
+Maintainer: Frederik <frhl@gmail.com>
+Description: Tools for working with proteomics data.
+License: MIT + file LICENSE
+LazyData: true
+Depends:
+    R (>= 3.6.1)
+Suggests:
+    devtools
+Imports:
+    shinyjs, 
+    stringr,
+    VennDiagram,
+    rmarkdown,
+    plyr,
+    httpuv,
+    mime,
+    jsonlite,
+    xtable,
+    digest, 
+    htmltools,
+    R6,
+    sourcetools,
+    ggplot2,
+    scales,
+    httr,
+    magrittr,
+    viridisLite,
+    base64enc, 
+    htmlwidgets,
+    tidyr,
+    hexbin,
+    RColorBrewer,
+    dplyr,
+    tibble,
+    lazyeval,
+    crosstalk,
+    purrr,
+    data.table,
+    gplots,
+    plotly,
+    ggrepel,
+    shinydashboard,
+    hash
+Encoding: UTF-8
+RoxygenNote: 7.0.2
+Collate: 
+    "addNames.R"
+    "assignFamily_inc_doubles.R"
+    "calculate_moderated_ttest.R"
+    "compare_two_files.R"
+    "makePlotFamilies_1quadrant.R"
+    "misc.R"
+    "plot_scatter.R"
+    "plot_volcano.R"
+    "search_scatter.R"
+    "search_volcano.R"
+    "seperate_to_groups_for.R"
+    "sp_layer_for_inweb.R"
+    "sp_layer_for_snp_to_gene.R"
+    "sp_layer_for_uploaded_genes.R"
+    "vp_layer_for_inweb.R"
+    "vp_layer_for_snp_to_gene.R"
+    "vp_layer_for_uploaded_genes.R"
