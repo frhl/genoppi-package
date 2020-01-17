@@ -1,4 +1,4 @@
-#' @title Impute values
+#' @title Impute missing values
 #' @description Replacing missing values with randomly sampled values from normal distribution,
 #' with width SD x width and down-shifted Median-Sd x shift compared to observed sample distribution.
 #' This is building upon the assumption that missing values have arisen due to low expression that 
@@ -16,7 +16,7 @@
 #' @return data.frame with missing values imputed.
 #' @export
 
-impute.gaussian <- function(df, width = 0.3, shift = -1.8, verbose = T){
+impute_gaussian <- function(df, width = 0.3, shift = -1.8, verbose = F){
 
   df$imputed <- as.logical(apply(df, 1, function(x) any(is.na(x)))) 
   cols <- as.vector(unlist(lapply(df, function(x) is.numeric(x) & any(is.na(x)))))

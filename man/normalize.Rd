@@ -20,7 +20,8 @@ intensity value.
 }
 \seealso{
 Other statistics: 
-\code{\link{mttest}}
+\code{\link{mttest}},
+\code{\link{scatter}}
 }
 \author{
 Frederik

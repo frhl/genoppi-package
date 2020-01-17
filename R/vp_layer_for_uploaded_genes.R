@@ -1,3 +1,9 @@
+#' @name vp_layer_for_uploaded_genes_gg
+#' @rdname vp_layer_for_uploaded_genes_gg
+#' @title Layer for uploaded genes in ggplot2
+#' @author April/Frederik
+#' @family layers
+#' @export
 
 vp_layer_for_uploaded_genes_gg <- function(p, d_g2s, usr_palette, lab){
   if(nrow(d_g2s)==0){

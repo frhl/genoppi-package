@@ -1,3 +1,9 @@
+#' @name sp_layer_for_uploaded_genes
+#' @rdname sp_layer_for_uploaded_genes
+#' @title Layer for uploaded genes to ggplot2
+#' @author April/Frederik
+#' @family layers
+#' @export
 
 sp_layer_for_uploaded_genes <- function(p, d_g2s){
   p <- add_markers(p, data = d_g2s, x = ~rep1, y= ~rep2,
@@ -7,6 +13,7 @@ sp_layer_for_uploaded_genes <- function(p, d_g2s){
                    text = ~paste(gene), textposition = ~ifelse(logFC>0,'middle right','middle left'), textfont = list(size = 11))
 }
 
+#' @rdname sp_layer_for_uploaded_genes
 sp_layer_for_uploaded_genes_gg <- function(p, d_g2s, usr_palette, lab){
   if(nrow(d_g2s)==0){
     validate(
@@ -27,6 +34,7 @@ sp_layer_for_uploaded_genes_gg <- function(p, d_g2s, usr_palette, lab){
   }
 }
 
+#' @rdname sp_layer_for_uploaded_genes
 sp_layer_for_uploaded_genes_cbf_gg <- function(p, d_g2s, lab){
   if(nrow(d_g2s)==0){
     validate(
@@ -47,7 +55,7 @@ sp_layer_for_uploaded_genes_cbf_gg <- function(p, d_g2s, lab){
   }
 }
 
-
+#' @rdname sp_layer_for_uploaded_genes
 sp_layer_for_uploaded_genes_no_text <- function(p, d_g2s){
   p <- add_markers(p, data = d_g2s, x = ~rep1, y= ~rep2,
                    marker = list(opacity = 1, line = list(width=0.6, color = "black"), size = 7),
@@ -55,6 +63,7 @@ sp_layer_for_uploaded_genes_no_text <- function(p, d_g2s){
                    mode = "markers+text", hoverinfo = "text")
 }
 
+#' @rdname sp_layer_for_uploaded_genes
 sp_layer_for_uploaded_genes_cbf <- function(p, d_g2s){
   p <- add_markers(p, data = d_g2s, x = ~rep1, y= ~rep2,
                    marker = list(opacity = 1, line = list(width=0.6, color = "black"), size = 7, symbol = 15),
@@ -63,6 +72,7 @@ sp_layer_for_uploaded_genes_cbf <- function(p, d_g2s){
                    text = ~paste(gene), textposition = ~ifelse(logFC>0,'middle right','middle left'), textfont = list(size = 11))
 }
 
+#' @rdname sp_layer_for_uploaded_genes
 sp_layer_for_uploaded_genes_cbf_no_text <- function(p, d_g2s){
   p <- add_markers(p, data = d_g2s, x = ~rep1, y= ~rep2,
                    marker = list(opacity = 1, line = list(width=0.6, color = "black"), size = 7, symbol = 15),
@@ -70,6 +80,7 @@ sp_layer_for_uploaded_genes_cbf_no_text <- function(p, d_g2s){
                    mode = "markers+text", hoverinfo = "text")
 }
 
+#' @rdname sp_layer_for_uploaded_genes
 sp_layer_for_uploaded_genes_none <- function(p, d){
   p <- add_markers(p, data = d, x = ~min(rep1), y= ~min(rep2),
                    marker = list(opacity = 0),
@@ -77,6 +88,7 @@ sp_layer_for_uploaded_genes_none <- function(p, d){
                    name = "no genes of interest")
 }
 
+#' @rdname sp_layer_for_uploaded_genes
 sp_layer_for_uploaded_genes_none_cbf <- function(p, d){
   p <- add_markers(p, data = d, x = ~min(rep1), y= ~min(rep2),
                    marker = list(opacity = 0),

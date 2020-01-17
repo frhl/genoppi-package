@@ -1,3 +1,9 @@
+#' @name vp_layer_for_inweb
+#' @rdname vp_layer_for_inweb
+#' @title InWeb Layers for ggplot2
+#' @author April/Frederik
+#' @family layers
+#' @export
 
 vp_layer_for_inweb <- function(p, d_in, marker_col, lab){
   if(nrow(d_in)==0){
@@ -20,6 +26,7 @@ vp_layer_for_inweb <- function(p, d_in, marker_col, lab){
   }
 }
 
+#' @rdname vp_layer_for_inweb
 vp_layer_for_inweb_sf_gg <- function(p, d_in, marker_col, lab){
   if(nrow(d_in)==0){
     p
@@ -38,19 +45,8 @@ vp_layer_for_inweb_sf_gg <- function(p, d_in, marker_col, lab){
   p
 }
 
-# vp_layer_for_inweb_no_text <- function(p, d_in, marker_col){
-#   if(nrow(d_in)==0){
-#     validate(
-#       need(nrow(d_in)>0, "No overlapping InWeb interactors identified")
-#     )
-#   } else if(nrow(d_in)>0){
-#     add_markers(p, data = d_in, x = ~logFC, y= ~-log10(pvalue),
-#                 marker = list(color = marker_col, size = 7, line = list(width=0.4, color = "black"), opacity = 1),
-#                 mode = "markers+text", hoverinfo = "text", legendgroup = "group1",
-#                 name = "InWeb")
-#   }
-# }
 
+#' @rdname vp_layer_for_inweb
 vp_layer_for_inweb_cbf <- function(p, d_in, lab){
   if(nrow(d_in)==0){
     validate(
@@ -74,20 +70,9 @@ vp_layer_for_inweb_cbf <- function(p, d_in, lab){
   }
 }
 
-# vp_layer_for_inweb_cbf_no_text <- function(p, d_in){
-#   if(nrow(d_in)==0){
-#     validate(
-#       need(nrow(d_in)>0, "No overlapping InWeb interactors identified")
-#     )
-#   } else if(nrow(d_in)>0){
-#     add_markers(p, data = d_in, x = ~logFC, y= ~-log10(pvalue),
-#                 marker = list(color = "#ffffff", size = 7, line = list(width=0.4, color = "black"), opacity = 1),
-#                 # mode = "markers",
-#                 mode = "markers+text", hoverinfo = "text", legendgroup = "group1",
-#                 name = "InWeb")
-#   }
-# }
 
+
+#' @rdname vp_layer_for_inweb
 vp_layer_for_inweb_sf <- function(p, d_in, marker_col){
   if(nrow(d_in)==0){
     p
@@ -100,6 +85,7 @@ vp_layer_for_inweb_sf <- function(p, d_in, marker_col){
   }
 }
 
+#' @rdname vp_layer_for_inweb
 vp_layer_for_inweb_no_text_sf <- function(p, d_in, marker_col){
   if(nrow(d_in)==0){
     p
@@ -111,6 +97,7 @@ vp_layer_for_inweb_no_text_sf <- function(p, d_in, marker_col){
   }
 }
 
+#' @rdname vp_layer_for_inweb
 vp_layer_for_inweb_cbf_sf <- function(p, d_in){
   if(nrow(d_in)==0){
     p
@@ -124,6 +111,7 @@ vp_layer_for_inweb_cbf_sf <- function(p, d_in){
   }
 }
 
+#' @rdname vp_layer_for_inweb
 vp_layer_for_inweb_cbf_sf_gg <- function(p, d_in, lab){
   if(nrow(d_in)==0){
     p
@@ -142,6 +130,7 @@ vp_layer_for_inweb_cbf_sf_gg <- function(p, d_in, lab){
   p
 }
 
+#' @rdname vp_layer_for_inweb
 vp_layer_for_inweb_cbf_no_text_sf <- function(p, d_in){
   if(nrow(d_in)==0){
     p

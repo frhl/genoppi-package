@@ -1,3 +1,9 @@
+#' @name compare_two_files
+#' @rdname compare_two_files
+#' @title Compare files
+#' @author April/Frederik
+#' @family infile
+#' @export
 
 compare_two_files_a <- function(orig, subset, overlaps){
   if(nrow(subset)==0 & nrow(overlaps)==0){
@@ -26,6 +32,7 @@ compare_two_files_a <- function(orig, subset, overlaps){
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_a_scatter <- function(orig, subset, overlaps){
   if(nrow(subset)==0 & nrow(overlaps)==0){
     validate(
@@ -53,6 +60,7 @@ compare_two_files_a_scatter <- function(orig, subset, overlaps){
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_b <- function(orig, subset, overlaps){
   if(nrow(subset)==0 & nrow(overlaps)==0){
     validate(
@@ -80,6 +88,7 @@ compare_two_files_b <- function(orig, subset, overlaps){
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_b_scatter <- function(orig, subset, overlaps){
   if(nrow(subset)==0 & nrow(overlaps)==0){
     validate(
@@ -107,6 +116,7 @@ compare_two_files_b_scatter <- function(orig, subset, overlaps){
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_aa <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   if(nrow(subset)==0 & nrow(overlaps1)==0 & nrow(overlaps2)==0 & nrow(overlaps3)==0){
     validate(
@@ -146,6 +156,7 @@ compare_two_files_aa <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_aa_scatter <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   if(nrow(subset)==0 & nrow(overlaps1)==0 & nrow(overlaps2)==0 & nrow(overlaps3)==0){
     validate(
@@ -185,6 +196,7 @@ compare_two_files_aa_scatter <- function(orig, subset, overlaps1, overlaps2, ove
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_bb <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   if(nrow(subset)==0 & nrow(overlaps1)==0 & nrow(overlaps2)==0 & nrow(overlaps3)==0){
     validate(
@@ -224,6 +236,7 @@ compare_two_files_bb <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_bb_scatter <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   if(nrow(subset)==0 & nrow(overlaps1)==0 & nrow(overlaps2)==0 & nrow(overlaps3)==0){
     validate(
@@ -263,6 +276,7 @@ compare_two_files_bb_scatter <- function(orig, subset, overlaps1, overlaps2, ove
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_cc <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   if(nrow(subset)==0 & nrow(overlaps1)==0 & nrow(overlaps2)==0 & nrow(overlaps3)==0){
     validate(
@@ -302,6 +316,7 @@ compare_two_files_cc <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_cc_scatter <- function(orig, subset, overlaps1, overlaps2, overlaps3){
   if(nrow(subset)==0 & nrow(overlaps1)==0 & nrow(overlaps2)==0 & nrow(overlaps3)==0){
     validate(
@@ -341,6 +356,7 @@ compare_two_files_cc_scatter <- function(orig, subset, overlaps1, overlaps2, ove
   p <- p %>% layout(legend = list(orientation = 'h', y = -0.23))
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_a <- function(orig, subset, overlaps){ #s_nga, , o_nga
   if(nrow(subset)==0 & nrow(overlaps)==0){ #nrow(s_nga)==0 &  & nrow(o_nga)==0
     validate(
@@ -380,6 +396,7 @@ compare_two_files_pf_a <- function(orig, subset, overlaps){ #s_nga, , o_nga
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_a_size <- function(orig, subset, overlaps, increase){ # s_nga, o_nga,
   if(nrow(subset)==0 & nrow(overlaps)==0){ #nrow(s_nga)==0 &  & nrow(o_nga)==0
     validate(
@@ -420,6 +437,7 @@ compare_two_files_pf_a_size <- function(orig, subset, overlaps, increase){ # s_n
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_b <- function(orig, subset, overlaps){ #, s_nga , o_nga
   if(nrow(subset)==0 & nrow(overlaps)==0){ #nrow(s_nga)==0 &  & nrow(o_nga)==0
     validate(
@@ -459,6 +477,7 @@ compare_two_files_pf_b <- function(orig, subset, overlaps){ #, s_nga , o_nga
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_b_size <- function(orig, subset, overlaps, increase){ #, s_nga, o_nga
   if(nrow(subset)==0 & nrow(overlaps)==0){ #nrow(s_nga)==0 &  & nrow(o_nga)==0
     validate(
@@ -497,6 +516,7 @@ compare_two_files_pf_b_size <- function(orig, subset, overlaps, increase){ #, s_
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_aa <- function(orig, subset,o_12, o_13, o_123){ # s_nga, o_12_nga, o_13_nga, , o_123_nga
   if(nrow(subset)==0 & nrow(o_12)==0 & nrow(o_13)==0 #nrow(s_nga)==0 & nrow(o_12_nga)==0 &
      & nrow(o_123)==0){ #nrow(o_13_nga)==0 & & nrow(o_123_nga)==0
@@ -563,6 +583,7 @@ compare_two_files_pf_aa <- function(orig, subset,o_12, o_13, o_123){ # s_nga, o_
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_aa_size <- function(orig, subset, o_12, o_13, o_123, increase){ #s_nga, o_12_nga, o_13_nga, o_123_nga,
   if(nrow(subset)==0 & nrow(o_12)==0 & nrow(o_13)==0 #nrow(s_nga)==0 & nrow(o_12_nga)==0 &
      & nrow(o_123)==0){ #nrow(o_13_nga)==0 & & nrow(o_123_nga)==0
@@ -629,6 +650,7 @@ compare_two_files_pf_aa_size <- function(orig, subset, o_12, o_13, o_123, increa
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_bb <- function(orig, subset, o_21, o_213){ #s_nga, o_21_nga, o_23, o_23_nga, , o_213_nga
   if(nrow(subset)==0 & nrow(o_21)==0 & nrow(o_23)==0 #& nrow(s_nga)==0 & nrow(o_21_nga)==0
      & nrow(o_213)==0){ #nrow(o_23_nga)==0 & & nrow(o_213_nga)==0
@@ -695,6 +717,7 @@ compare_two_files_pf_bb <- function(orig, subset, o_21, o_213){ #s_nga, o_21_nga
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_bb_size <- function(orig, subset, o_21, o_23, o_213, increase){ # s_nga, o_21_nga, o_23_nga, o_213_nga,
   if(nrow(subset)==0 & nrow(o_21)==0 & nrow(o_23)==0 #& nrow(s_nga)==0 & nrow(o_21_nga)==0
      & nrow(o_213)==0){ #nrow(o_23_nga)==0 & & nrow(o_213_nga)==0
@@ -761,6 +784,7 @@ compare_two_files_pf_bb_size <- function(orig, subset, o_21, o_23, o_213, increa
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_cc <- function(orig, subset, o_31, o_32, o_312){ #s_nga, o_31_nga, o_32_nga, , o_312_nga
   if(nrow(subset)==0 & nrow(o_31)==0 & nrow(o_32)==0 # & nrow(s_nga)==0 & nrow(o_31_nga)==0
      & nrow(o_312)==0){#nrow(o_32_nga)==0 & & nrow(o_312_nga)==0
@@ -827,6 +851,7 @@ compare_two_files_pf_cc <- function(orig, subset, o_31, o_32, o_312){ #s_nga, o_
   p
 }
 
+#' @rdname compare_two_files
 compare_two_files_pf_cc_size <- function(orig, subset, o_31, o_32, o_312, increase){ #s_nga, o_31_nga, o_32_nga, o_312_nga,
   if(nrow(subset)==0 & nrow(o_31)==0 & nrow(o_32)==0 # & nrow(s_nga)==0 & nrow(o_31_nga)==0
      & nrow(o_312)==0){#nrow(o_32_nga)==0 & & nrow(o_312_nga)==0

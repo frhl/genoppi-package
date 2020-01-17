@@ -1,3 +1,9 @@
+#' @name makePlotFamilies_1quadrant
+#' @rdname makePlotFamilies_1quadrant
+#' @title Make plot families in first quadrant.
+#' @author April/Frederik
+#' @family plot
+#' @export
 
 makePlotFamilies_1quadrant <- function(data_fam, data, sortPF){ #data_gna,
   ### replace logFC and pvalue in di* by these from dpm

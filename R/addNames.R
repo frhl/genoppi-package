@@ -1,4 +1,10 @@
 
+#' @name addNames
+#' @rdname parsing_addNames
+#' @title Read genes that have no family assigned
+#' @author April
+#' @family parsing
+
 addNames <- function(d){
   if((file.exists("data/genes_naf_wnames.txt")) == TRUE){
     ### read genes that have no family assigned

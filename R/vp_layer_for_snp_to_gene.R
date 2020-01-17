@@ -1,3 +1,10 @@
+#' @name vp_layer_for_snp_to_gene_sgl
+#' @rdname vp_layer_for_snp_to_gene_sgl
+#' @title Layer for mapping SNPs to gene in ggplot2
+#' @author April/Frederik
+#' @family layers
+#' @export
+
 vp_layer_for_snp_to_gene_sgl <- function(p, snp_sgl, marker_col){
   if(nrow(snp_sgl)==0){
     p
@@ -11,6 +18,7 @@ vp_layer_for_snp_to_gene_sgl <- function(p, snp_sgl, marker_col){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_sgl_gg <- function(p, snp_sgl, marker_col, lab){
   if(nrow(snp_sgl)==0){
     p
@@ -29,6 +37,7 @@ vp_layer_for_snp_to_gene_sgl_gg <- function(p, snp_sgl, marker_col, lab){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_sgl_no_text <- function(p, snp_sgl, marker_col){
   if(nrow(snp_sgl)==0){
     p
@@ -42,6 +51,7 @@ vp_layer_for_snp_to_gene_sgl_no_text <- function(p, snp_sgl, marker_col){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_sgl_cbf <- function(p, snp_sgl){
   if(nrow(snp_sgl)==0){
     p
@@ -55,6 +65,7 @@ vp_layer_for_snp_to_gene_sgl_cbf <- function(p, snp_sgl){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_sgl_cbf_gg <- function(p, snp_sgl, lab){
   if(nrow(snp_sgl)==0){
     p
@@ -73,6 +84,7 @@ vp_layer_for_snp_to_gene_sgl_cbf_gg <- function(p, snp_sgl, lab){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_sgl_cbf_no_text <- function(p, snp_sgl){
   if(nrow(snp_sgl)==0){
     p
@@ -85,6 +97,7 @@ vp_layer_for_snp_to_gene_sgl_cbf_no_text <- function(p, snp_sgl){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_mgl <- function(p, snp_mgl, marker_col){
   if(nrow(snp_mgl)==0){
     p
@@ -98,6 +111,7 @@ vp_layer_for_snp_to_gene_mgl <- function(p, snp_mgl, marker_col){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_mgl_gg <- function(p, snp_mgl, marker_col, lab){
   if(nrow(snp_mgl)==0){
     p
@@ -116,6 +130,7 @@ vp_layer_for_snp_to_gene_mgl_gg <- function(p, snp_mgl, marker_col, lab){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_mgl_no_text <- function(p, snp_mgl, marker_col){
   if(nrow(snp_mgl)==0){
     p
@@ -128,6 +143,7 @@ vp_layer_for_snp_to_gene_mgl_no_text <- function(p, snp_mgl, marker_col){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_mgl_cbf <- function(p, snp_mgl){
   if(nrow(snp_mgl)==0){
     p
@@ -141,6 +157,7 @@ vp_layer_for_snp_to_gene_mgl_cbf <- function(p, snp_mgl){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_mgl_cbf_gg <- function(p, snp_mgl, lab){
   if(nrow(snp_mgl)==0){
     p
@@ -158,6 +175,7 @@ vp_layer_for_snp_to_gene_mgl_cbf_gg <- function(p, snp_mgl, lab){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_mgl_cbf_no_text <- function(p, snp_mgl){
   if(nrow(snp_mgl)==0){
     p
@@ -170,6 +188,7 @@ vp_layer_for_snp_to_gene_mgl_cbf_no_text <- function(p, snp_mgl){
   p
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_none <- function(p, d){
   p <- add_markers(p, data = d, x = 0, y= ~-log10(max(pvalue)),
                    marker = list(opacity = 0),
@@ -177,6 +196,7 @@ vp_layer_for_snp_to_gene_none <- function(p, d){
                    name = "no SNP to gene")
 }
 
+#' @rdname vp_layer_for_snp_to_gene_sgl
 vp_layer_for_snp_to_gene_none_cbf <- function(p, d){
   p <- add_markers(p, data = d, x = 0, y= ~-log10(max(pvalue)),
                    marker = list(opacity = 0),

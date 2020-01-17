@@ -1,3 +1,10 @@
+#' @name search_volcano
+#' @rdname search_volcano
+#' @title Search Volcano plots
+#' @author April/Frederik
+#' @family search
+#' @export
+
 #volcano - search/found highlight
 search_volcano <- function(p, found){
   if(nrow(found)==0){
@@ -11,6 +18,7 @@ search_volcano <- function(p, found){
   p
 }
 
+#' @rdname search_volcano
 search_volcano_gg <- function(p, found){
   if(nrow(found)==0){
     p
@@ -25,6 +33,7 @@ search_volcano_gg <- function(p, found){
   p
 }
 
+#' @rdname search_volcano
 search_volcano_gg_reg_label <- function(p, found){
   if(nrow(found)==0){
     p

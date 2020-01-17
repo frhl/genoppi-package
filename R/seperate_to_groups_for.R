@@ -1,5 +1,9 @@
-
-
+#' @name separate_to_groups_for_color
+#' @rdname separate_to_groups_for_color
+#' @title Seperate to groups for color
+#' @author April/Frederik
+#' @family grouping
+#' @export
 
 #Gradient for user upload color
 separate_to_groups_for_color <- function(vp_data, color_data, color_theme, type){
@@ -45,6 +49,7 @@ separate_to_groups_for_color <- function(vp_data, color_data, color_theme, type)
 #   list(df1=df1, no_exist=no_exist)
 # }
 
+#' @rdname separate_to_groups_for_color
 #Marker colors based on FDR
 separate_to_groups_for_color_integrated <- function(vp_data, threshold, col1, col2){
   below_thresh <- subset(vp_data, FDR < threshold)
@@ -85,6 +90,7 @@ separate_to_groups_for_color_integrated <- function(vp_data, threshold, col1, co
 #   data <- rbind(below_thresh, above_thresh)
 # }
 
+#' @rdname separate_to_groups_for_color
 #Two gray tones
 separate_to_groups_for_cbf_integrated <- function(vp_data, threshold){
   below_thresh <- subset(vp_data, FDR < threshold)
@@ -111,6 +117,7 @@ separate_to_groups_for_cbf_integrated <- function(vp_data, threshold){
 #   data <- rbind(below_thresh, above_thresh)
 # }
 
+#' @rdname separate_to_groups_for_color
 separate_to_groups_for_exac_bar <- function(vp_data){
   grp1 <- subset(vp_data, FDR <= 0.33)
   grp2 <- subset(vp_data, 0.33 < FDR & FDR <= 0.66)

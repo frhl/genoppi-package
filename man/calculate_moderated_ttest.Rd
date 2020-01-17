@@ -24,7 +24,8 @@ Calculate the moderated ttest using limma package.
 }
 \seealso{
 Other statistics: 
-\code{\link{normalize}()}
+\code{\link{normalize}()},
+\code{\link{scatter}}
 }
 \author{
 April/Frederik

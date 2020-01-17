@@ -1,3 +1,9 @@
+#' @name sp_layer_for_snp_to_gene_sgl
+#' @rdname sp_layer_for_snp_to_gene_sgl
+#' @title Layer for mapping uploaded SNPS to genes in ggplot2
+#' @author April/Frederik
+#' @family layers
+#' @export
 
 sp_layer_for_snp_to_gene_sgl <- function(p, snp_sgl){
   p <- add_markers(p, data = snp_sgl, x = ~rep1, y= ~rep2,
@@ -7,6 +13,7 @@ sp_layer_for_snp_to_gene_sgl <- function(p, snp_sgl){
                    name = "SGL gene")
 }
 
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_sgl_no_text <- function(p, snp_sgl){
   p <- add_markers(p, data = snp_sgl, x = ~rep1, y= ~rep2,
                    marker = list(color = "#80cdc1", size = 7, line = list(width=0.4, color = "black"), opacity = 1), #, symbol = "square"
@@ -14,6 +21,7 @@ sp_layer_for_snp_to_gene_sgl_no_text <- function(p, snp_sgl){
                    name = "SGL gene")
 }
 
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_sgl_cbf <- function(p, snp_sgl){
   p <- add_markers(p, data = snp_sgl, x = ~rep1, y= ~rep2,
                    marker = list(color = "#ffffff", size = 7, line = list(width=0.4, color = "black"), opacity = 1, symbol = "square"),
@@ -22,6 +30,7 @@ sp_layer_for_snp_to_gene_sgl_cbf <- function(p, snp_sgl){
                    name = "SGL gene")
 }
 
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_sgl_cbf_no_text <- function(p, snp_sgl){
   p <- add_markers(p, data = snp_sgl, x = ~rep1, y= ~rep2,
                    marker = list(color = "#ffffff", size = 7, line = list(width=0.4, color = "black"), opacity = 1, symbol = "square"),
@@ -29,7 +38,7 @@ sp_layer_for_snp_to_gene_sgl_cbf_no_text <- function(p, snp_sgl){
                    name = "SGL gene")
 }
 
-
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_mgl <- function(p, snp_mgl){
   p <- add_markers(p, data = snp_mgl, x = ~rep1, y= ~rep2,
                    marker = list(color = "#c2a5cf", size = 7, line = list(width=0.4, color = "black"), opacity = 1), #, symbol = 2
@@ -38,6 +47,7 @@ sp_layer_for_snp_to_gene_mgl <- function(p, snp_mgl){
                    name = "MGL gene")
 }
 
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_mgl_no_text <- function(p, snp_mgl){
   p <- add_markers(p, data = snp_mgl, x = ~rep1, y= ~rep2,
                    marker = list(color = "#c2a5cf", size = 7, line = list(width=0.4, color = "black"), opacity = 1), #, symbol = 2
@@ -45,6 +55,7 @@ sp_layer_for_snp_to_gene_mgl_no_text <- function(p, snp_mgl){
                    name = "MGL gene")
 }
 
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_mgl_cbf <- function(p, snp_mgl){
   p <- add_markers(p, data = snp_mgl, x = ~rep1, y= ~rep2,
                    marker = list(color = "#ffffff", size = 7, line = list(width=0.4, color = "black"), opacity = 1, symbol = 2),
@@ -53,6 +64,7 @@ sp_layer_for_snp_to_gene_mgl_cbf <- function(p, snp_mgl){
                    name = "MGL gene")
 }
 
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_mgl_cbf_no_text <- function(p, snp_mgl){
   p <- add_markers(p, data = snp_mgl, x = ~rep1, y= ~rep2,
                    marker = list(color = "#ffffff", size = 7, line = list(width=0.4, color = "black"), opacity = 1, symbol = 2),
@@ -60,6 +72,7 @@ sp_layer_for_snp_to_gene_mgl_cbf_no_text <- function(p, snp_mgl){
                    name = "MGL gene")
 }
 
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_none <- function(p, d){
   p <- add_markers(p, data = d, x = ~min(rep1), y= ~min(rep2),
                    marker = list(opacity = 0),
@@ -67,6 +80,7 @@ sp_layer_for_snp_to_gene_none <- function(p, d){
                    name = "no SNP to gene")
 }
 
+#' @rdname sp_layer_for_snp_to_gene_sgl
 sp_layer_for_snp_to_gene_none_cbf <- function(p, d){
   p <- add_markers(p, data = d, x = ~min(rep1), y= ~min(rep2),
                    marker = list(opacity = 0),
