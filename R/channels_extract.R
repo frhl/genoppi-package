@@ -24,45 +24,48 @@
 
 data <- read.csv('~/Projects/03_MICOM/data/raw/martin15/15martin_EDNRA_NoNorm_First_proteins.csv')
 
-#' @description define what channels are bait and mock in a labelled
-#' experiment, e.g. iTRAQ or TMT.
-channels_define <- function(data, channels){
-  
-  ## locate columns that contains channels
+#' @description Extract the unique channel names
+#' @param data a data.frame containg channels in column names, e.g.
+#' Intensity.iTRAQ4.115 and Intensity.iTRAQ4.116.
+#' @param subset A regex (string) to subset the data data
+#' additionally, e.g. 'Intensity' or 'Ratio'
+#' @return vector of column names for channels.
+channels_extract <- function(data, subset = 'Intensity'){
   columns <- colnames(data)
+  channels_type <- grepl(type, columns)
   column_channels <- grepl('[[:digit:]]{3}', columns)
   channel_numbers <- unique(regmatches(columns, regexpr('[[:digit:]]{3}',columns)))
-  #channels <- 
+  return(data[,column_channels & channels_type][1:length(channel_numbers)])
+}
+
+channels_filter <- function(data, min_peptides = 2, species = NULL, ignore=NULL){
+  #nignored <- sum(tmpData$filter.ignore)
+  #tmpData$enoughProteins <- data[,info$col.unique.proteins] >= peptide.threshold | tmpData$filter.ignore
+  #tmpData <- tmpData[tmpData$enoughProteins == TRUE,]
+  #tmpData$human <- grepl(filter, tmpData[,1]) | tmpData$filter.ignore
+  #tmpData <- tmpData[tmpData$human,]
+  #if (verbose & nignored > 0) warn(paste('[filtering]', nignored, 'entries was ignored.'))
+}
+
+
+ready_labelled_data <- function(data, from = "Intensity"){
+  
+  ## 
+  channels = channels_extract(data, from)
+  channels[channels == 0,] <- NA
+  
+  
+}
+
+data_describe <- function(x){
   
   
 }
 
 
-channels_extract <- function(data, channels){
-  
-  
 
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+channels_extract(data, 'Int')
+##
 
 
 

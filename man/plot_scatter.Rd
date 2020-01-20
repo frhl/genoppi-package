@@ -33,7 +33,7 @@ Make scatter
 }
 \seealso{
 Other statistics: 
-\code{\link{mttest}},
+\code{\link{mttest}()},
 \code{\link{normalize}()}
 }
 \author{

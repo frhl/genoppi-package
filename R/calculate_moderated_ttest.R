@@ -9,11 +9,13 @@
 #' gene, replicate 1 and replicate 2. Triplicates and so on can be 
 #' also  be included. The function assumes that the first column 
 #' contains gene information.
+#' @param normalize should replicate columns be normalized? Default
+#' is 'median', NULL indicates no normalization.
 #' @author April/Frederik
 #' @family statistics
 #' @export
 
-calculate_moderated_ttest <- function(input_file){
+calculate_moderated_ttest <- function(input_file, normalize = 'median'){
   
   require(limma)
   ## check format
@@ -22,6 +24,8 @@ calculate_moderated_ttest <- function(input_file){
   # isolate rep columns
   reps <- grepl('rep', colnames(input_file)) & unlist(lapply(input_file, is.numeric))
   calculated <- input_file[, reps]
+  # apply median normalization
+  if (!is.null(normalize)) calculated <- normalize(calculated, normalize)
   # calc moderated t-test
   myfit <- lmFit(calculated, method="robust")
   myfit <- eBayes(myfit)

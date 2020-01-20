@@ -24,3 +24,12 @@ test_that('normalize with mean',{
   expect_equal(result, reference)
   
 })
+
+test_that('normalize with one character column',{
+  
+  df <- data.frame(gene=LETTERS, A=rnorm(26,5,15), B=runif(26,0,43))
+  result = normalize(df, type = 'median')
+  reference = data.frame(gene=LETTERS, A=df$A-median(df$A), B=df$B-median(df$B))
+  expect_equal(result, reference)
+  
+})

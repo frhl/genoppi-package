@@ -7,7 +7,7 @@
 \alias{calculate_moderated_ttest_uniprot}
 \title{Moderated t-test for proteomics}
 \usage{
-calculate_moderated_ttest(input_file)
+calculate_moderated_ttest(input_file, normalize = "median")
 
 calculate_moderated_ttest_hgnc(input_file)
 
@@ -18,6 +18,9 @@ calculate_moderated_ttest_uniprot(input_file)
 gene, replicate 1 and replicate 2. Triplicates and so on can be 
 also  be included. The function assumes that the first column 
 contains gene information.}
+
+\item{normalize}{should replicate columns be normalized? Default
+is 'median', NULL indicates no normalization.}
 }
 \description{
 Calculate the moderated ttest using limma package.
